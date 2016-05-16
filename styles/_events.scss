@@ -1,0 +1,132 @@
+// events.scss
+
+.k-events-sortby {
+	font-size: 14px;
+	color: #AAA;
+	display: flex;
+	flex-direction: row;
+
+	.k-title {
+		flex: 0 0 auto;
+		padding-right: 8px;
+	}
+	> select {
+		color: #AAA;
+		flex: 1 1 auto;
+		border: none;
+		border-bottom: 1px solid #AAA;
+		background-color: transparent;
+
+	}
+}
+
+$category-spacing: 6px;
+.k-events-categories {
+	font-size: 0;
+	overflow-x: auto;
+	white-space: nowrap;
+	margin-bottom: 10px;
+
+	.k-aligner {
+		height: 46px;
+	}
+	> div, > a {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	> a {
+		color: $color-carnival-blue;
+		text-decoration: none;
+		margin: 0 $category-spacing;
+		font-size: 18px;
+	}
+	.k-option {
+		border-radius: 500px;
+		padding: 4px 16px;
+		background-color: #F3F3F3;
+	}
+	.k-padding {
+		width: $content-padding - $category-spacing;
+	}
+}
+
+.k-event {
+	margin-top: 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+	display: block;
+	text-decoration: none;
+	color: $color-carnival-blue;
+
+	.k-event-text {
+		font-size: 14px;
+		padding: 4px;
+	}
+	.k-title {
+		font-weight: bold;
+		font-size: 18px;
+		color: $color-carnival-red;
+	}
+	.k-event-image > img {
+		display: block;
+		width: 100%;
+		height: 120px;
+	}
+}
+
+.k-event-banner {
+	img {
+		width: 100%;
+		height: 200px;
+		display: block;
+	}
+	.k-container {
+		font-size: 14px;
+	}
+	.k-title {
+		@extend .k-global-title;
+		padding-top: 10px;
+		font-size: 32px;
+	}
+	.k-spacer.k-spacer-button {
+		height: 8px;
+	}
+	.k-button {
+		display: inline-block;
+		vertical-align: top;
+		padding: 6px 16px;
+		margin-right: 5px;
+	}
+	.k-button-reserve {
+		background-color: #00c500;
+	}
+	.k-button-share {
+		background-color: $color-carnival-blue;
+		color: #FFF;
+	}
+}
+
+.k-title.k-event-subtitle {
+	font-weight: bold;
+}
+
+.k-event-facts {
+	padding: 8px 0;
+	> .k-container > .k-title {
+		padding-bottom: 8px;
+	}
+	.k-fact {
+		font-size: 14px;
+		.k-title {
+			font-weight: bold;
+		}
+	}
+}
+
+.k-event-fun-facts {
+	font-size: 14px;
+	list-style: none;
+
+	li {
+		padding-bottom: 8px;
+	}
+}

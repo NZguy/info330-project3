@@ -1,0 +1,17 @@
+// Global variables including sizing, color, etc
+
+$color-carnival-red: #B61B38;
+$color-carnival-blue: #014E8F;
+
+$global-nav-background-color: $color-carnival-red;
+$global-nav-color: #FFF;
+$global-sidebar-background-color: $color-carnival-blue;
+$global-sidebar-header-background-color: $color-carnival-red;
+$global-sidebar-color: #FFF;
+
+// Animation
+$animation-duration: 0.5s;
+$animation-style: cubic-bezier(0.3, 0.3, 0.02, 1);
+
+// Sizing
+$content-padding: 24px;

@@ -1,0 +1,131 @@
+// Contains styles for the global navigation and sidebar
+
+$global-nav-height: 60px;
+$global-sidebar-header-avatar-size: 55px;
+
+#global-nav,
+.global-nav-push {
+	height: $global-nav-height;
+}
+
+#global-sidebar-controller {
+	// Closed
+	&:not(:checked) {
+		+ #global-sidebar {
+			left: -100%;
+		}
+		~ #global-sidebar-closer {
+			display: none;
+		}
+	}
+
+	// Open
+	&:checked {
+		~ #global-sidebar {
+			left: 0;
+		}
+		~ #global-sidebar-closer {
+			display: block;
+		}
+	}
+}
+
+#global-sidebar {
+	position: fixed;
+	z-index: 100;
+	max-width: 400px;
+	width: 80%;
+	top: 0;
+	bottom: 0;
+	background-color: $global-sidebar-background-color;
+	color: $global-sidebar-color;
+
+	@include transition(left $animation-duration $animation-style);
+}
+
+#global-sidebar-header {
+	padding: 16px $content-padding;
+	font-size: 12px;
+	background: transparent url(https://s3-us-west-1.amazonaws.com/fm-msc/i330/sidebar-header-background-image.gif) no-repeat;
+	background-size: cover;
+}
+
+#global-sidebar-header-username {
+	font-weight: bold;
+}
+
+#global-sidebar-header-avatar {
+	img {
+		height: $global-sidebar-header-avatar-size;
+		width: $global-sidebar-header-avatar-size;
+		border-radius: $global-sidebar-header-avatar-size/2;
+		margin-bottom: $content-padding;
+	}
+}
+
+#global-sidebar-closer {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 99;
+}
+
+#global-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: $global-nav-background-color;
+	z-index: 98;
+	font-size: 0;
+	padding-right: $content-padding;
+	overflow: hidden;
+	white-space: nowrap;
+
+	> div, > label {
+		display: inline-block;
+		font-size: 18px;
+		color: $global-nav-color;
+	}
+	> label {
+		padding: 0 $content-padding;
+		line-height: $global-nav-height;
+		height: $global-nav-height;
+
+	}
+}
+#global-sidebar-links {
+	list-style: none;
+	padding-top: 10px;
+
+	i {
+		display: inline-block;
+		width: 18px;
+		padding-right: $content-padding;
+		text-align: center;
+	}
+
+	a {
+		display: block;
+		padding: 10px $content-padding;
+		text-decoration: none;
+		color: #FFF;
+
+		&:link, &:visited {
+			background-color: transparent;
+		}
+		&:hover, &:active, &:focus {
+			background-color: rgba(0, 0, 0, .3);
+		}
+	}
+}
+#global-sidebar-author {
+	margin-top: 10px;
+	border-top: 1px solid #999;
+	padding: 20px $content-padding;
+	color: #CCC;
+	font-size: 10px;
+}

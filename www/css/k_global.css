@@ -1,0 +1,106 @@
+html, body,
+ol, ul, li,
+table, tr, td, th, tbody, thead, tfoot,
+h1, h2, h3, h4, h5, h6,
+dd, dt, dl {
+  margin: 0;
+  padding: 0; }
+
+.k-controller {
+  display: none; }
+
+#global-nav,
+.global-nav-push {
+  height: 60px; }
+
+#global-sidebar-controller:not(:checked) + #global-sidebar {
+  left: -100%; }
+#global-sidebar-controller:not(:checked) ~ #global-sidebar-closer {
+  display: none; }
+#global-sidebar-controller:checked ~ #global-sidebar {
+  left: 0; }
+#global-sidebar-controller:checked ~ #global-sidebar-closer {
+  display: block; }
+
+#global-sidebar {
+  position: fixed;
+  z-index: 100;
+  max-width: 400px;
+  width: 80%;
+  top: 0;
+  bottom: 0;
+  background-color: #0F0;
+  color: #FFF;
+  transition: left 0.5s cubic-bezier(0.3, 0.3, 0.02, 1);
+  -webkit-transition: left 0.5s cubic-bezier(0.3, 0.3, 0.02, 1); }
+
+#global-sidebar-header {
+  padding: 16px 24px;
+  font-size: 12px;
+  background: transparent url(https://s3-us-west-1.amazonaws.com/fm-msc/i330/sidebar-header-background-image.gif) no-repeat;
+  background-size: cover; }
+
+#global-sidebar-header-username {
+  font-weight: bold; }
+
+#global-sidebar-header-avatar img {
+  height: 55px;
+  width: 55px;
+  border-radius: 27.5px;
+  margin-bottom: 24px; }
+
+#global-sidebar-closer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99; }
+
+#global-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  z-index: 98;
+  font-size: 0;
+  padding-right: 24px;
+  overflow: hidden;
+  white-space: nowrap; }
+  #global-nav > div, #global-nav > label {
+    display: inline-block;
+    font-size: 18px;
+    color: #FFF; }
+  #global-nav > label {
+    padding: 0 24px;
+    line-height: 60px;
+    height: 60px; }
+
+#global-sidebar-links {
+  list-style: none;
+  padding-top: 10px; }
+  #global-sidebar-links i {
+    display: inline-block;
+    width: 18px;
+    padding-right: 24px;
+    text-align: center; }
+  #global-sidebar-links a {
+    display: block;
+    padding: 10px 24px;
+    text-decoration: none;
+    color: #FFF; }
+    #global-sidebar-links a:link, #global-sidebar-links a:visited {
+      background-color: transparent; }
+    #global-sidebar-links a:hover, #global-sidebar-links a:active, #global-sidebar-links a:focus {
+      background-color: rgba(0, 0, 0, 0.3); }
+
+#global-sidebar-author {
+  margin-top: 10px;
+  border-top: 1px solid #999;
+  padding: 20px 24px;
+  color: #CCC;
+  font-size: 10px; }
+
+/*# sourceMappingURL=k_global.css.map */

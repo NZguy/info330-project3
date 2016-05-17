@@ -4,3 +4,16 @@
 	transition: $params;
 	-webkit-transition: $params;
 }
+
+html, body,
+ol, ul, li,
+table, tr, td, th, tbody, thead, tfoot,
+h1, h2, h3, h4, h5, h6,
+dd, dt, dl {
+	margin: 0;
+	padding: 0;
+}
+
+.k-controller {
+	display: none;
+}

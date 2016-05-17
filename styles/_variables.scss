@@ -1,11 +1,14 @@
+// Carmax variables
+@import 'd_variables';
+
 // Global variables including sizing, color, etc
 
 $color-carnival-red: #B61B38;
 $color-carnival-blue: #014E8F;
 
-$global-nav-background-color: $color-carnival-red;
+$global-nav-background-color: $color-carmax-blue;
 $global-nav-color: #FFF;
-$global-sidebar-background-color: $color-carnival-blue;
+$global-sidebar-background-color: $color-carmax-lightblue;
 $global-sidebar-header-background-color: $color-carnival-red;
 $global-sidebar-color: #FFF;
 

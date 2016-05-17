@@ -126,7 +126,7 @@ ul, ol, li, select, option {
   width: 80%;
   top: 0;
   bottom: 0;
-  background-color: #014E8F;
+  background-color: #77C2E6;
   color: #FFF;
   transition: left 0.5s cubic-bezier(0.3, 0.3, 0.02, 1);
   -webkit-transition: left 0.5s cubic-bezier(0.3, 0.3, 0.02, 1); }
@@ -160,7 +160,7 @@ ul, ol, li, select, option {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #B61B38;
+  background-color: #054FA0;
   z-index: 98;
   font-size: 0;
   padding-right: 24px;

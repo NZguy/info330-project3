@@ -1,6 +1,7 @@
 <?php
 namespace i330p3\template;
 require_once PHP_ROOT . '/i330p3/Setup.php';
+use common\base\Preconditions;
 use common\template\component\TemplateField;
 use common\template\Content;
 
@@ -14,6 +15,9 @@ class StaticPage extends Content{
 	const FIELD_TITLE = "title";
 
 	public static function getTemplateRenderContents(array $fields): string {
+		if (Preconditions::isStringNullWhitespaceOrEmpty($fields[self::GLOBAL_NAV_CONTENT])) {
+			$fields[self::GLOBAL_NAV_CONTENT] = $fields[self::FIELD_TITLE];
+		}
 		return <<<HTML
 <!DOCTYPE html>
 <html lang="en">
@@ -71,7 +75,7 @@ HTML;
 		return [
 				TemplateField::newBuilder()->called(self::FIELD_BODY)->asRequired()->build(),
 				TemplateField::newBuilder()->called(self::FIELD_TITLE)->asRequired()->build(),
-				TemplateField::newBuilder()->called(self::GLOBAL_NAV_CONTENT)->asRequired()->build()
+				TemplateField::newBuilder()->called(self::GLOBAL_NAV_CONTENT)->asNotRequired()->defaultingTo("")->build()
 		];
 	}
 }

@@ -1,6 +1,8 @@
-// global variables
+// import other styles
+@import 'd_variables';
 
-$global-nav-background-color: #000;
+// global variables
+$global-nav-background-color: $color-carmax-blue;
 $global-nav-color: #FFF;
 
 $global-sidebar-background-color: #0F0;

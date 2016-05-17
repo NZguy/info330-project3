@@ -1,6 +1,6 @@
 <?php
-namespace i330p2\template;
-require_once PHP_ROOT . '/i330p2/Setup.php';
+namespace i330p3\template;
+require_once PHP_ROOT . '/i330p3/Setup.php';
 use common\template\component\TemplateField;
 use common\template\Content;
 

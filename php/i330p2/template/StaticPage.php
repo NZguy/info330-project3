@@ -22,7 +22,7 @@ class StaticPage extends Content{
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" type="text/css" href="/css/d_main.css" />
+	<link rel="stylesheet" type="text/css" href="/css/d_global.css" />
 	<link rel="stylesheet" type="text/css" href="/css/global.css" />
 </head>
 <body>

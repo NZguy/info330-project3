@@ -23,7 +23,7 @@ class StaticPage extends Content{
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="/css/d_global.css" />
-	<link rel="stylesheet" type="text/css" href="/css/global.css" />
+	<link rel="stylesheet" type="text/css" href="/css/k_global.css" />
 </head>
 <body>
 

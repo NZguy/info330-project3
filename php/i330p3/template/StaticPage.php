@@ -10,6 +10,7 @@ use common\template\Content;
  */
 class StaticPage extends Content{
 	const FIELD_BODY = "body";
+	const GLOBAL_NAV_CONTENT = "show-global-nav";
 	const FIELD_TITLE = "title";
 
 	public static function getTemplateRenderContents(array $fields): string {
@@ -53,7 +54,7 @@ class StaticPage extends Content{
 
 <div id="global-nav">
 	<label for="global-sidebar-controller"><i class="fa fa-bars"></i></label>
-	<div>{$fields[self::FIELD_TITLE]}</div>
+	<div>{$fields[self::GLOBAL_NAV_CONTENT]}</div>
 </div>
 <div class="global-nav-push"></div>
 
@@ -69,7 +70,8 @@ HTML;
 	public static function getTemplateFields_Internal(): array {
 		return [
 				TemplateField::newBuilder()->called(self::FIELD_BODY)->asRequired()->build(),
-				TemplateField::newBuilder()->called(self::FIELD_TITLE)->asRequired()->build()
+				TemplateField::newBuilder()->called(self::FIELD_TITLE)->asRequired()->build(),
+				TemplateField::newBuilder()->called(self::GLOBAL_NAV_CONTENT)->asRequired()->build()
 		];
 	}
 }

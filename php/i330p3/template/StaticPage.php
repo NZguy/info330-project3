@@ -35,19 +35,19 @@ class StaticPage extends Content{
 <input type="checkbox" class="k-controller" id="global-sidebar-controller" />
 <div id="global-sidebar">
 	<div id="global-sidebar-header">
-		<div id="global-sidebar-header-avatar"><img src="https://s3-us-west-1.amazonaws.com/fm-msc/i330/user-avatar.gif" alt="Profile Picture" /></div>
+		<div id="global-sidebar-header-avatar"><img src="http://i.imgur.com/XpUjuSD.gif" alt="Profile Picture" /></div>
 		<div>
-			<div id="global-sidebar-header-username">adunkman330@ccruises.com</div>
-			<div id="global-sidebar-header-name">Duncan Andrew</div>
+			<div id="global-sidebar-header-username">codelee330@carmax.com</div>
+			<div id="global-sidebar-header-name">Kodlee Yin</div>
 		</div>
 	</div>
 	<ul id="global-sidebar-links">
 		<li><a href="/"><i class="fa fa-home"></i>Home</a></li>
-		<li><a href="/recommendations"><i class="fa fa-users"></i>Recommendations</a></li>
-		<li><a href="/bookmarks"><i class="fa fa-ship"></i>Bookmarks</a></li>
-		<li><a href="/questionnaire"><i class="fa fa-exclamation-triangle"></i>Questionnaire</a></li>
-		<li><a href="/personality-quiz"><i class="fa fa-cog"></i>Personality Quiz</a></li>
-		<li><a href="/imports"><i class="fa fa-cog"></i>Imports</a></li>
+		<li><a href="/recommendations"><i class="fa fa-car"></i>Recommendations</a></li>
+		<li><a href="/bookmarks"><i class="fa fa-star"></i>Bookmarks</a></li>
+		<li><a href="/questionnaire"><i class="fa fa-question"></i>Questionnaire</a></li>
+		<li><a href="/personality-quiz"><i class="fa fa-pencil"></i>Personality Quiz</a></li>
+		<li><a href="/imports"><i class="fa fa-download"></i>Imports</a></li>
 		<li><a href="/settings"><i class="fa fa-cog"></i>Settings</a></li>
 	</ul>
 	<div id="global-sidebar-author">
@@ -58,7 +58,7 @@ class StaticPage extends Content{
 
 <div id="global-nav">
 	<label for="global-sidebar-controller"><i class="fa fa-bars"></i></label>
-	<div>{$fields[self::GLOBAL_NAV_CONTENT]}</div>
+	{$fields[self::GLOBAL_NAV_CONTENT]}
 </div>
 <div class="global-nav-push"></div>
 

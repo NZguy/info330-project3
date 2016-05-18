@@ -95,7 +95,7 @@ h2.k-title {
   width: 80%;
   top: 0;
   bottom: 0;
-  background-color: #0F0;
+  background-color: #FFF;
   color: #FFF;
   transition: left 0.5s cubic-bezier(0.3, 0.3, 0.02, 1);
   -webkit-transition: left 0.5s cubic-bezier(0.3, 0.3, 0.02, 1); }
@@ -103,7 +103,7 @@ h2.k-title {
 #global-sidebar-header {
   padding: 16px 22px;
   font-size: 12px;
-  background: transparent url(https://s3-us-west-1.amazonaws.com/fm-msc/i330/sidebar-header-background-image.gif) no-repeat;
+  background: transparent url(http://i.imgur.com/HloaObd.gif) no-repeat;
   background-size: cover; }
 
 #global-sidebar-header-username {
@@ -139,10 +139,20 @@ h2.k-title {
     display: inline-block;
     font-size: 18px;
     color: #FFF; }
+  #global-nav > div {
+    margin: 18px 0 auto 64px; }
   #global-nav > label {
     padding: 0 22px;
     line-height: 60px;
-    height: 60px; }
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #global-nav > img {
+    height: 60px;
+    width: auto;
+    margin: 0 auto;
+    display: block; }
 
 #global-sidebar-links {
   list-style: none;
@@ -156,7 +166,7 @@ h2.k-title {
     display: block;
     padding: 10px 22px;
     text-decoration: none;
-    color: #FFF; }
+    color: #5A5C63; }
     #global-sidebar-links a:link, #global-sidebar-links a:visited {
       background-color: transparent; }
     #global-sidebar-links a:hover, #global-sidebar-links a:active, #global-sidebar-links a:focus {

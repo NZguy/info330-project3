@@ -72,6 +72,18 @@ h2.k-title {
     background-color: #ffd51d;
     color: #000; }
 
+.k-input {
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  padding: 0 13px;
+  height: 35px;
+  font-size: .75rem;
+  font-family: Montserrat,sans-serif;
+  border: 1px solid #999; }
+  .k-input option {
+    color: #666; }
+
 .k-spacer.k-normal {
   height: 46px; }
 
@@ -178,5 +190,33 @@ h2.k-title {
   padding: 20px 22px;
   color: #CCC;
   font-size: 10px; }
+
+.k-form-identifier {
+  display: inline-block; }
+  .k-form-identifier > span {
+    display: inline-block;
+    padding: 2px; }
+
+.k-form-collapser {
+  display: inline-block;
+  color: #054fa0;
+  font-family: Montserrat,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: .75rem; }
+
+.k-form-content {
+  display: block; }
+
+.k-form-collapser-wrapper {
+  margin-bottom: 6px; }
+
+.k-controller:not(:checked) + .k-form-collapser-wrapper .k-form-identifier .k-minus {
+  display: none; }
+.k-controller:not(:checked) + .k-form-collapser-wrapper + .k-form-content {
+  display: none; }
+
+.k-controller:checked + .k-form-collapser-wrapper .k-form-identifier .k-plus {
+  display: none; }
 
 /*# sourceMappingURL=k_global.css.map */

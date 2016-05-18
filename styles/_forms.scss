@@ -1,0 +1,37 @@
+// Forms
+
+.k-form-identifier {
+	display: inline-block;
+
+	> span {
+		display: inline-block;
+		padding: 2px;
+	}
+}
+.k-form-collapser {
+	display: inline-block;
+	color: $color-primary;
+	font-family: Montserrat,sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: .75rem;
+}
+.k-form-content {
+	display: block;
+}
+.k-form-collapser-wrapper {
+	margin-bottom: 6px;
+}
+.k-controller:not(:checked) + .k-form-collapser-wrapper {
+	.k-form-identifier .k-minus {
+		display: none;
+	}
+	+ .k-form-content {
+		display: none;
+	}
+}
+.k-controller:checked + .k-form-collapser-wrapper {
+	.k-form-identifier  .k-plus {
+		display: none;
+	}
+}

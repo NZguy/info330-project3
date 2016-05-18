@@ -102,7 +102,20 @@ h2 {
 		color: #000;
 	}
 }
+.k-input {
+	margin-bottom: 10px;
+	display: block;
+	width: 100%;
+	padding: 0 13px;
+	height: 35px;
+	font-size: .75rem;
+	font-family: Montserrat,sans-serif;
+	border: 1px solid #999;
 
+	option {
+		color: #666;
+	}
+}
 
 // Spacers
 .k-spacer {

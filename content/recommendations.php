@@ -1,6 +1,6 @@
 <?php
 require_once PHP_ROOT . '/i330p3/Setup.php';
-require_once PHP_ROOT . '/i330p3/CarArray.php';
+use i330p3\CarArray;
 use i330p3\template\StaticPage;
 use i330p3\SessionKVs;
 use common\session\Session;
@@ -11,6 +11,12 @@ if(!Session::exists(SessionKVs::CAR_BOOKMARK_ARRAY)){
     $bookmarks = Session::set(SessionKVs::CAR_BOOKMARK_ARRAY, array(false, false, false, false));
 }
 
+if(Session::get(SessionKVs::CAR_BOOKMARK_ARRAY)[0]){
+    echo "true";
+}else{
+    echo "false";
+}
+
 
 // Make the events div first and store the HTML in a variable
 $carHtml = "";
@@ -18,11 +24,11 @@ for ($i = 0; $i <= 3; $i++) {
     $carHtml .= ' 
 <a href="#" class="d-car">
 	<div class="d-car-image">
-		<img src="'.$carArray[$i][0].'" alt="car"/>
+		<img src="'.CarArray::getArray()[$i][0].'" alt="car"/>
 	</div>
 	<div class="d-car-text">
-		<div class="d-title">'.$carArray[$i][1].'</div>
-		<div class="d-desc">'.$carArray[$i][2].'</div>
+		<div class="d-title">'.CarArray::getArray()[$i][1].'</div>
+		<div class="d-desc">'.CarArray::getArray()[$i][2].'</div>
 	</div>
 	<label>
 	    <input type="checkbox" class="d-car-bookmark-button"/> 
@@ -40,7 +46,6 @@ HTML;
 $navContent = <<<HTML
 <div>Recommendations</div>
 HTML;
-
 
 StaticPage::createContent()
     ->with(StaticPage::FIELD_TITLE, "Recommendations")

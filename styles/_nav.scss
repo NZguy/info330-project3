@@ -91,21 +91,21 @@ $global-sidebar-header-avatar-size: 55px;
 		color: $global-nav-color;
 	}
 	> div {
-		margin: 18px 0 auto 64px;
+		line-height: $global-nav-height;
 	}
 	> label {
 		padding: 0 $content-padding;
 		line-height: $global-nav-height;
 		height: $global-nav-height;
-		position: absolute;
-		top: 0;
-		left: 0;
 	}
 	> img {
 		height: 60px;
 		width: auto;
 		margin: 0 auto; // Doesn't work
 		display: block;
+		position: absolute;
+		top: 0px;
+		left: calc(50vw - 125px);
 	}
 }
 #global-sidebar-links {

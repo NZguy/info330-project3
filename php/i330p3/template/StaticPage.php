@@ -45,9 +45,9 @@ class StaticPage extends Content{
 		<li><a href="/"><i class="fa fa-home"></i>Home</a></li>
 		<li><a href="/recommendations"><i class="fa fa-car"></i>Recommendations</a></li>
 		<li><a href="/bookmarks"><i class="fa fa-star"></i>Bookmarks</a></li>
-		<li><a href="/questionnaire"><i class="fa fa-question"></i>Questionnaire</a></li>
-		<li><a href="/personality-quiz"><i class="fa fa-pencil"></i>Personality Quiz</a></li>
-		<li><a href="/imports"><i class="fa fa-download"></i>Imports</a></li>
+		<li><a href="/forms/import"><i class="fa fa-download"></i>Import</a></li>
+		<li><a href="/forms/personality"><i class="fa fa-pencil"></i>Personality Quiz</a></li>
+		<li><a href="/forms/questionnaire"><i class="fa fa-question"></i>Questionnaire</a></li>
 		<li><a href="/settings"><i class="fa fa-cog"></i>Settings</a></li>
 	</ul>
 	<div id="global-sidebar-author">

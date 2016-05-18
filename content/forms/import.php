@@ -1,6 +1,17 @@
 <?php
 require_once PHP_ROOT . '/i330p3/Setup.php';
 use i330p3\template\StaticPage;
+use i330p3\SessionKVs;
+use common\session\Session;
+
+
+$bottomButton = "";
+if (Session::exists(SessionKVs::TUTORIAL_KEY)) {
+	$bottomButton = '<a href="/recommendations" class="k-button k-fullscreen k-secondary">Return to Recommendations</a>';
+}else{
+	$bottomButton = '<a href="/forms/personality" class="k-button k-fullscreen k-secondary">Continue to Personality Survey</a>';
+	// Add another button for skipping this step and tutorial
+}
 
 $body = <<<HTML
 <div class="k-page-title k-container">
@@ -32,9 +43,8 @@ $body = <<<HTML
 
 
 	<div class="k-spacer k-normal"></div>
-	<a href="/forms/personality" class="k-button k-fullscreen k-secondary">Continue to Personality Survey</a>
+	$bottomButton
 </div>
-
 HTML;
 
 StaticPage::createContent()

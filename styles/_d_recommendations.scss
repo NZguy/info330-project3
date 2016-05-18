@@ -33,6 +33,21 @@
   .d-desc{
 
   }
+  .d-car-bookmark-button{
+    display: none;
+  }
+  .d-car-bookmark-empty{
+    display: block;
+  }
+  .d-car-bookmark-full{
+    display: none;
+  }
+  .d-car-bookmark-button:checked ~ .d-car-bookmark-empty{
+    display: none;
+  }
+  .d-car-bookmark-button:checked ~ .d-car-bookmark-full{
+    display: block;
+  }
   .d-car-icon{
     float: right;
     margin: 14px 10px 0 0;
@@ -41,12 +56,4 @@
       color: $color-carmax-yellow;
     }
   }
-}
-
-.visible{
-  display: block;
-}
-
-.hidden{
-  display: none;
 }

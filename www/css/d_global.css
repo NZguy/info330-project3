@@ -24,16 +24,20 @@
     font-weight: bold;
     font-size: 18px;
     color: #054FA0; }
+  .d-car .d-car-bookmark-button {
+    display: none; }
+  .d-car .d-car-bookmark-empty {
+    display: block; }
+  .d-car .d-car-bookmark-full {
+    display: none; }
+  .d-car .d-car-bookmark-button:checked ~ .d-car-bookmark-empty {
+    display: none; }
+  .d-car .d-car-bookmark-button:checked ~ .d-car-bookmark-full {
+    display: block; }
   .d-car .d-car-icon {
     float: right;
     margin: 14px 10px 0 0; }
     .d-car .d-car-icon .fa-star {
       color: #FFD51D; }
-
-.visible {
-  display: block; }
-
-.hidden {
-  display: none; }
 
 /*# sourceMappingURL=d_global.css.map */

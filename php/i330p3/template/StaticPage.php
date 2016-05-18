@@ -29,6 +29,7 @@ class StaticPage extends Content{
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="/css/d_global.css" />
 	<link rel="stylesheet" type="text/css" href="/css/k_global.css" />
+	<script src="js/bookmarks.js" type="text/javascript"></script>
 </head>
 <body>
 

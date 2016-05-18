@@ -7,11 +7,10 @@ use common\session\Session;
 
 Session::set(SessionKVs::TUTORIAL_KEY, SessionKVs::TUTORIAL_VALUE_ACTIVE);
 
-/*
-if(Session::exists(SessionKVs::CAR_BOOKMARK_ARRAY)){
-    $bookmarks = Session::get(SessionKVs::CAR_BOOKMARK_ARRAY);
+if(!Session::exists(SessionKVs::CAR_BOOKMARK_ARRAY)){
+    $bookmarks = Session::set(SessionKVs::CAR_BOOKMARK_ARRAY, array(false, false, false, false));
 }
-*/
+
 
 // Make the events div first and store the HTML in a variable
 $carHtml = "";
@@ -25,16 +24,17 @@ for ($i = 0; $i <= 3; $i++) {
 		<div class="d-title">'.$carArray[$i][1].'</div>
 		<div class="d-desc">'.$carArray[$i][2].'</div>
 	</div>
-	<div class="d-car-icon visible"><i class="fa fa-star-o fa-lg"></i></div>
-	<div class="d-car-icon hidden"><i class="fa fa-star fa-lg"></i></div>
+	<label>
+	    <input type="checkbox" class="d-car-bookmark-button"/> 
+        <div class="d-car-icon d-car-bookmark-empty"><i class="fa fa-star-o fa-lg"></i></div>
+        <div class="d-car-icon d-car-bookmark-full"><i class="fa fa-star fa-lg"></i></div>
+	</label>
 </a>
 ';
 }
 
 $body = <<<HTML
-
 $carHtml
-
 HTML;
 
 $navContent = <<<HTML

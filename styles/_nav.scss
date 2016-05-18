@@ -46,7 +46,7 @@ $global-sidebar-header-avatar-size: 55px;
 #global-sidebar-header {
 	padding: 16px $content-padding;
 	font-size: 12px;
-	background: transparent url(https://s3-us-west-1.amazonaws.com/fm-msc/i330/sidebar-header-background-image.gif) no-repeat;
+	background: transparent url(http://i.imgur.com/HloaObd.gif) no-repeat;
 	background-size: cover;
 }
 
@@ -90,11 +90,22 @@ $global-sidebar-header-avatar-size: 55px;
 		font-size: 18px;
 		color: $global-nav-color;
 	}
+	> div {
+		margin: 18px 0 auto 64px;
+	}
 	> label {
 		padding: 0 $content-padding;
 		line-height: $global-nav-height;
 		height: $global-nav-height;
-
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	> img {
+		height: 60px;
+		width: auto;
+		margin: 0 auto; // Doesn't work
+		display: block;
 	}
 }
 #global-sidebar-links {
@@ -112,7 +123,7 @@ $global-sidebar-header-avatar-size: 55px;
 		display: block;
 		padding: 10px $content-padding;
 		text-decoration: none;
-		color: #FFF;
+		color: $global-sidebar-link-color;
 
 		&:link, &:visited {
 			background-color: transparent;

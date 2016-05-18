@@ -1,3 +1,39 @@
+.d-car {
+  margin: 20px auto 0 auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  display: block;
+  text-decoration: none;
+  color: #5A5C63;
+  width: 90%; }
+  .d-car .d-car-image {
+    display: block;
+    height: 140px;
+    overflow: hidden;
+    position: relative; }
+  .d-car .d-car-image > img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    position: absolute;
+    top: -40px; }
+  .d-car .d-car-text {
+    font-size: 14px;
+    padding: 4px;
+    display: inline-block; }
+  .d-car .d-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #054FA0; }
+  .d-car .d-car-icon {
+    float: right;
+    margin: 14px 10px 0 0; }
+    .d-car .d-car-icon .fa-star {
+      color: #FFD51D; }
 
+.visible {
+  display: block; }
+
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=d_global.css.map */

@@ -1,0 +1,52 @@
+.d-car {
+  margin: 20px auto 0 auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  display: block;
+  text-decoration: none;
+  color: $color-carmax-text;
+  width: 90%;
+
+
+  .d-car-image{
+    display: block;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+  }
+  .d-car-image > img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    position: absolute;
+    top: -40px;
+  }
+  .d-car-text {
+    font-size: 14px;
+    padding: 4px;
+    display: inline-block;
+  }
+  .d-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: $color-carmax-blue;
+  }
+  .d-desc{
+
+  }
+  .d-car-icon{
+    float: right;
+    margin: 14px 10px 0 0;
+
+    .fa-star{
+      color: $color-carmax-yellow;
+    }
+  }
+}
+
+.visible{
+  display: block;
+}
+
+.hidden{
+  display: none;
+}

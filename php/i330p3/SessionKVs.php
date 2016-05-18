@@ -8,4 +8,5 @@ require_once PHP_ROOT . '/i330p3/Setup.php';
 class SessionKVs {
 	const TUTORIAL_KEY = "tutorial";
 	const TUTORIAL_VALUE_ACTIVE = "yep we've finished the tutorial";
+	const CAR_BOOKMARK_ARRAY = "array";
 }

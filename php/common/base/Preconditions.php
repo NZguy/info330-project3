@@ -30,4 +30,14 @@ class Preconditions {
 		}
 		return false;
 	}
+
+	/**
+	 * checks if the given string is null, solely whitespace, or is empty.
+	 *
+	 * @param string $s
+	 * @return bool
+	 */
+	public static function isStringNullWhitespaceOrEmpty(string $s): bool {
+		return is_null($s) || $s === "" || trim($s) === "";
+	}
 }

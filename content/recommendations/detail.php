@@ -26,7 +26,7 @@ $detailHtml = '
     </div>
 </div>
 
-<div class="d-detail-button">HOLD THIS CAR</div>
+<div class="d-detail-button">Hold this car</div>
 
 <div class="d-detail-container">
     <h2>Specifications</h2>

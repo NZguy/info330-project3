@@ -1,0 +1,22 @@
+.d-settings-notification{
+  margin: 10px 0px 20px 0px;
+  padding: 15px 28px 15px 28px;
+  background-color: $color-carmax-lightblue;
+  font-weight: bold;
+  font-family: $font-carmax-heading;
+  text-transform: capitalize;
+}
+
+.d-settings-button{
+  margin: 16px 12px 16px 12px;
+  padding: 15px 0 15px 16px;
+  background-color: $color-carmax-yellow;
+  font-weight: bold;
+  font-family: $font-carmax-heading;
+  text-transform: capitalize;
+
+  > a{
+    text-decoration: none;
+    color: #000;
+  }
+}

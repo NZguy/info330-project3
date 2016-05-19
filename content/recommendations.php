@@ -1,15 +1,19 @@
 <?php
 require_once PHP_ROOT . '/i330p3/Setup.php';
 use i330p3\Car;
-use i330p3\CarArray;
 use i330p3\template\StaticPage;
 use i330p3\SessionKVs;
 use common\session\Session;
 
 Session::set(SessionKVs::TUTORIAL_KEY, SessionKVs::TUTORIAL_VALUE_ACTIVE);
 
+// If there isn't a car array in session, create one of the correct size
 if(!Session::exists(SessionKVs::CAR_BOOKMARK_ARRAY)){
-    $bookmarks = Session::set(SessionKVs::CAR_BOOKMARK_ARRAY, array(false, false, false, false));
+    $bookmarkArray = array();
+    for($i = 0; $i < sizeof(Car::getCars()); $i++){
+        $bookmarkArray[$i] = false;
+    }
+    $bookmarks = Session::set(SessionKVs::CAR_BOOKMARK_ARRAY, $bookmarkArray);
 }
 
 // Make the events div first and store the HTML in a variable
@@ -35,6 +39,7 @@ for ($i = 0; $i <= 3; $i++) {
 }
 
 $body = <<<HTML
+<script src="/js/bookmarks.js" type="text/javascript"></script>
 $carHtml
 HTML;
 

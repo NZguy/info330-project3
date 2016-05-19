@@ -1,0 +1,83 @@
+.d-detail-image{
+  display: block;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.d-detail-image > img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  position: absolute;
+  top: -40px;
+}
+.d-detail-title{
+  font-weight: bold;
+  font-size: 26px;
+  font-family: $font-carmax-heading;
+  color: #FFF;
+  padding: 10px 0px 10px 24px;
+  background-color: $color-carmax-lightblue;
+}
+
+.d-detail-top{
+  margin: 10px 0 20px 0;
+  height: 48px;
+
+  > div{
+    margin-left: 24px;
+    width: 40%;
+    float: left;
+
+    > .d-detail-top-name{
+      font-family: $font-carmax-text;
+      color: $font-carmax-text;
+    }
+    > .d-detail-top-number{
+      font-family: $font-carmax-heading;
+      color: $color-carmax-blue;
+      font-size: 24px;
+    }
+  }
+}
+
+.d-detail-button{
+  margin: 10px 12px 20px 12px;
+  padding: 15px 0 15px 16px;
+  background-color: $color-carmax-yellow;
+  font-weight: bold;
+  font-family: $font-carmax-heading;
+}
+
+.d-detail-container{
+  margin: 10px 12px 20px 12px;
+  padding: 10px 12px 10px 12px;
+  font-family: $font-carmax-heading;
+  color: $color-carmax-text;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+
+  > h2{
+    font-size: 22px;
+    color: $color-carmax-blue;
+  }
+  > h3{
+    margin: 16px 10px 4px 10px;
+    font-size: 18px;
+  }
+
+  > .d-detail-spec{
+    margin: 0 10px 12px 10px;
+    font-size: 16px;
+    font-weight: 200;
+    border-bottom: solid 1px $color-carmax-text;
+    overflow: auto;
+
+    > .d-detail-spec-name{
+      float: left;
+      color: $color-carmax-blue;
+    }
+    > .d-detail-spec-data{
+      float: right;
+    }
+  }
+}

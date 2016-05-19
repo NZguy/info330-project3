@@ -28,11 +28,13 @@
   .d-title {
     font-weight: bold;
     font-size: 18px;
+    font-family: $font-carmax-heading;
     color: $color-carmax-blue;
   }
   .d-desc{
-
+    font-family: $font-carmax-text;
   }
+
   .d-car-bookmark-button{
     display: none;
   }

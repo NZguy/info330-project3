@@ -11,7 +11,11 @@ Session::set(SessionKVs::TUTORIAL_KEY, SessionKVs::TUTORIAL_VALUE_ACTIVE);
 if(!Session::exists(SessionKVs::CAR_BOOKMARK_ARRAY)){
     $bookmarkArray = array();
     for($i = 0; $i < sizeof(Car::getCars()); $i++){
-        $bookmarkArray[$i] = false;
+        if($i <= 1){
+            $bookmarkArray[$i] = true;
+        }else{
+            $bookmarkArray[$i] = false;
+        }
     }
     $bookmarks = Session::set(SessionKVs::CAR_BOOKMARK_ARRAY, $bookmarkArray);
 }

@@ -1,5 +1,6 @@
 <?php
 require_once PHP_ROOT . '/i330p3/Setup.php';
+use i330p3\Car;
 use i330p3\CarArray;
 use i330p3\template\StaticPage;
 use i330p3\SessionKVs;
@@ -14,14 +15,15 @@ if(!Session::exists(SessionKVs::CAR_BOOKMARK_ARRAY)){
 // Make the events div first and store the HTML in a variable
 $carHtml = "";
 for ($i = 0; $i <= 3; $i++) {
+    $currentCar = Car::getCars()[$i];
     $carHtml .= ' 
 <a href="/recommendations/detail?car=' .$i. '" class="d-car">
 	<div class="d-car-image">
-		<img src="' .CarArray::getArray()[$i][0]. '" alt="car"/>
+		<img src="' .$currentCar->image. '" alt="car"/>
 	</div>
 	<div class="d-car-text">
-		<h2 class="d-title">' .CarArray::getArray()[$i][1]. '</h2>
-		<div class="d-desc">' .CarArray::getArray()[$i][2]. '</div>
+		<h2 class="d-title">' .$currentCar->year.' '.$currentCar->company.' '.$currentCar->model. '</h2>
+		<div class="d-desc">$' .number_format($currentCar->price). '</div>
 	</div>
 	<label>
 	    <input type="checkbox" class="d-car-bookmark-button"/> 

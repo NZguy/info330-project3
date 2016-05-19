@@ -8,26 +8,25 @@ $resetParam = \common\base\Http::getGetParamValue("reset");
 $resetMessageHtml = "";
 if (!is_null($resetParam)) {
     Session::delete($resetParam);
-    $resetMessageHtml = "<div class='k-notification'><div class='k-container'>Reset session key: $resetParam</div></div>";
+    $resetMessageHtml = "<div class='d-settings-notification'>Reset session key: $resetParam</div>";
 }
 
 $tutorialKey = SessionKVs::TUTORIAL_KEY;
 
 $body = <<<HTML
-<div class="k-container">
-	<div class="k-page-header">
-		<div class="k-title">Settings</div>
-	</div>
-</div>
 $resetMessageHtml
-<div class="k-container">
-	<div class="k-question-container">
-		<a href="/settings?reset=$tutorialKey" class="k-button k-button-full k-button-active">Reset tutorial completion</a>
-	</div>
+<div class="d-settings-button">
+    <a href="/settings?reset=$tutorialKey">Reset tutorial completion</a>
 </div>
 HTML;
+
+$navContent = <<<HTML
+<div>Settings</div>
+HTML;
+
 
 StaticPage::createContent()
     ->with(StaticPage::FIELD_TITLE, "Settings")
     ->with(StaticPage::FIELD_BODY, $body)
+    ->with(StaticPage::GLOBAL_NAV_CONTENT, $navContent)
     ->render();

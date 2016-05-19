@@ -11,24 +11,17 @@ if(!Session::exists(SessionKVs::CAR_BOOKMARK_ARRAY)){
     $bookmarks = Session::set(SessionKVs::CAR_BOOKMARK_ARRAY, array(false, false, false, false));
 }
 
-if(Session::get(SessionKVs::CAR_BOOKMARK_ARRAY)[0]){
-    echo "true";
-}else{
-    echo "false";
-}
-
-
 // Make the events div first and store the HTML in a variable
 $carHtml = "";
 for ($i = 0; $i <= 3; $i++) {
     $carHtml .= ' 
-<a href="#" class="d-car">
+<a href="/recommendations/detail?car=' .$i. '" class="d-car">
 	<div class="d-car-image">
-		<img src="'.CarArray::getArray()[$i][0].'" alt="car"/>
+		<img src="' .CarArray::getArray()[$i][0]. '" alt="car"/>
 	</div>
 	<div class="d-car-text">
-		<div class="d-title">'.CarArray::getArray()[$i][1].'</div>
-		<div class="d-desc">'.CarArray::getArray()[$i][2].'</div>
+		<h2 class="d-title">' .CarArray::getArray()[$i][1]. '</h2>
+		<div class="d-desc">' .CarArray::getArray()[$i][2]. '</div>
 	</div>
 	<label>
 	    <input type="checkbox" class="d-car-bookmark-button"/> 

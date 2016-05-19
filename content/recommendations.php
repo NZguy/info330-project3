@@ -18,7 +18,7 @@ if(!Session::exists(SessionKVs::CAR_BOOKMARK_ARRAY)){
 
 // Make the events div first and store the HTML in a variable
 $carHtml = "";
-for ($i = 0; $i <= 3; $i++) {
+for ($i = 0; $i < sizeof(Car::getCars()); $i++) {
     $currentCar = Car::getCars()[$i];
     $carHtml .= ' 
 <a href="/recommendations/detail?car=' .$i. '" class="d-car">

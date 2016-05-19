@@ -13,16 +13,12 @@ if (Session::exists(SessionKVs::TUTORIAL_KEY)) {
 }
 
 $body = <<<HTML
-<div class="k-page-title k-container">
-	<div class="k-title">
-		Personality Quiz
-	</div>
-</div>
+<div class="k-spacer k-normal"></div>
 <div class="k-container">
-	<h2 class="k-title">Let us get to know you!</h2>
+	<h2 class="k-title">Tell us what you want.</h2>
 	<div class="k-block-text">
-		We use your answers here to tailor our recommendations to your personal lifestyle. Feel free
-		to answer as few or as many questions as you want.
+		Alongside our personality and sophisticated import algorithms, we'd like to hear what you
+		want directly because, well, you know you best.
 	</div>
 	
 	<div class="k-spacer k-normal"></div>

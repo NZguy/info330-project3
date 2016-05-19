@@ -13,6 +13,7 @@ if (Session::exists(SessionKVs::TUTORIAL_KEY)) {
 }
 
 $body = <<<HTML
+<div class="k-spacer k-normal"></div>
 <div class="k-container">
 	<h2 class="k-title">Let us get to know you!</h2>
 	<div class="k-block-text">
@@ -179,6 +180,6 @@ $body = <<<HTML
 HTML;
 
 StaticPage::createContent()
-		->with(StaticPage::FIELD_TITLE, "Import")
+		->with(StaticPage::FIELD_TITLE, "Personality Quiz")
 		->with(StaticPage::FIELD_BODY, $body)
 		->render();

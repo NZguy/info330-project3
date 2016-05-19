@@ -33,7 +33,23 @@ for ($i = 0; $i <= 3; $i++) {
 }
 
 $body = <<<HTML
+<div class="k-spacer k-normal"></div>
+
+<div class='k-container'>
+    <h2 class='k-title'>Here's What We Found For You</h2>
+    <div class='k-block-text'>
+        We've sent our highly trained staff to find cars that fit your each and ever need and
+        here are the results. Star (bookmark) each vehicle that looks nice and to compare with our
+        patent pending car-parer-er in the Bookmarks tab.
+    </div>
+</div>
+
+<div class="k-spacer k-normal"></div>
 $carHtml
+<div class="k-spacer k-normal"></div>
+<div class="k-container">
+    <a class="k-button k-fullscreen k-secondary" href="/bookmarks">Compare Bookmarked</a>
+</div>
 HTML;
 
 $navContent = <<<HTML

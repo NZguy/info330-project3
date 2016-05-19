@@ -38,6 +38,6 @@ class Preconditions {
 	 * @return bool
 	 */
 	public static function isStringNullWhitespaceOrEmpty(string $s): bool {
-		return is_null($s) || $s === "" || trim($s) === "";
+		return is_null($s) || $s == "" || trim($s) == "";
 	}
 }

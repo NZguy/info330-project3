@@ -15,8 +15,9 @@ class StaticPage extends Content {
 	const FIELD_TITLE = "title";
 
 	public static function getTemplateRenderContents(array $fields): string {
+		$globalNavContent = $fields[self::GLOBAL_NAV_CONTENT];
 		if (Preconditions::isStringNullWhitespaceOrEmpty($fields[self::GLOBAL_NAV_CONTENT])) {
-			$fields[self::GLOBAL_NAV_CONTENT] = $fields[self::FIELD_TITLE];
+			$globalNavContent = "<div>" . $fields[self::FIELD_TITLE] . "</div>";
 		}
 		return <<<HTML
 <!DOCTYPE html>
@@ -59,7 +60,7 @@ class StaticPage extends Content {
 
 <div id="global-nav">
 	<label for="global-sidebar-controller"><i class="fa fa-bars"></i></label>
-	{$fields[self::GLOBAL_NAV_CONTENT]}
+	$globalNavContent
 </div>
 <div class="global-nav-push"></div>
 

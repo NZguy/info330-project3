@@ -56,6 +56,9 @@ dd, dt, dl {
   padding-left: 22px;
   padding-right: 22px; }
 
+.k-clearfix {
+  clear: both; }
+
 .k-title {
   font-family: Montserrat,sans-serif; }
 

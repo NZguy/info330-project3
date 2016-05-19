@@ -1,6 +1,10 @@
+.d-rec-container{
+  background-color: #F2F2F2;
+}
+
 .d-car {
   margin: 20px auto 0 auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  background-color: #FFF;
   display: block;
   text-decoration: none;
   color: $color-carmax-text;
@@ -9,7 +13,7 @@
 
   .d-car-image{
     display: block;
-    height: 140px;
+    height: 45vw;
     overflow: hidden;
     position: relative;
   }
@@ -18,12 +22,13 @@
     height: auto;
     vertical-align: middle;
     position: absolute;
-    top: -40px;
+    top: -11vw;
   }
   .d-car-text {
     font-size: 14px;
     padding: 4px;
     display: inline-block;
+    
   }
   .d-title {
     font-weight: bold;
@@ -52,7 +57,7 @@
   }
   .d-car-icon{
     float: right;
-    margin: 14px 10px 0 0;
+    margin: 14px 10px 10px 0;
 
     .fa-star{
       color: $color-carmax-yellow;

@@ -50,6 +50,9 @@ dd, dt, dl {
 	padding-left: $content-padding;
 	padding-right: $content-padding;
 }
+.k-clearfix {
+	clear: both;
+}
 
 // Text, titles, containers
 .k-title {

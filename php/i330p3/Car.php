@@ -106,5 +106,38 @@ class Car {
 		$this->image = $image;
 	}
 
-
+	public function makeCompareHtml() {
+		$price = "$" . number_format($this->price);
+		return <<<HTML
+<a class="k-compare-table-entry" href="/recommendations/detail?car={$this->id}">
+	<div class="k-comp-image"><img src="{$this->image}" alt="{$this->model}" /></div>
+	<div class="k-comp-year-comp-model">
+		{$this->year} <span class="k-comp-alt">{$this->company}</span><br />
+		{$this->model}
+	</div>
+	<div class="k-comp-price-mileage-reviews">
+		$price<br />
+		{$this->mileage} <span class="k-comp-alt">Miles</span><br />
+		{$this->reviews} <span class="k-comp-alt">Reviews</span>
+	</div>
+	<div class="k-comp-intext">
+		<span class="k-comp-alt">Interior:</span> {$this->interior}<br />
+		<span class="k-comp-alt">Exterior:</span> {$this->exterior}
+	</div>
+	<div class="k-comp-transmission-drive">
+		{$this->transmission}<br />
+		{$this->drive}
+	</div>
+	<div class="k-comp-mpg-liters-cylinders">
+		{$this->mpg} <span class="k-comp-alt">MPG</span><br />
+		{$this->engineLiters}<br />
+		{$this->engineCylinders} <span class="k-comp-alt">Cylinder</span>
+	</div>
+	<div class="k-comp-engine-hp-torque">
+		{$this->engineHp} <span class="k-comp-alt">HP</span><br />
+		{$this->engineTorque} <span class="k-comp-alt">Torque</span>
+	</div>
+</a>
+HTML;
+	}
 }

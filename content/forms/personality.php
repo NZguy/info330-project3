@@ -13,11 +13,6 @@ if (Session::exists(SessionKVs::TUTORIAL_KEY)) {
 }
 
 $body = <<<HTML
-<div class="k-page-title k-container">
-	<div class="k-title">
-		Personality Quiz
-	</div>
-</div>
 <div class="k-container">
 	<h2 class="k-title">Let us get to know you!</h2>
 	<div class="k-block-text">

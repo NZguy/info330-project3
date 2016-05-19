@@ -9,7 +9,7 @@ use common\template\Content;
 /**
  * Class EmptyStaticPage
  */
-class StaticPage extends Content{
+class StaticPage extends Content {
 	const FIELD_BODY = "body";
 	const GLOBAL_NAV_CONTENT = "show-global-nav";
 	const FIELD_TITLE = "title";

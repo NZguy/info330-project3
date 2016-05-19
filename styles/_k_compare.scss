@@ -1,0 +1,59 @@
+// compare
+#k-compare-table-wrapper {
+	overflow: auto;
+
+}
+
+$compareHeight: 90px;
+.k-compare-table-entry {
+	font-size: 0;
+	white-space: nowrap;
+	height: $compareHeight;
+	padding-bottom: 10px;
+	display: block;
+	text-decoration: none;
+	color: #000;
+
+	> div {
+		display: inline-block;
+		font-size: 14px;
+		vertical-align: middle;
+	}
+	.k-comp-image {
+		padding-left: $content-padding;
+		width: 140px;
+		img {
+			height: $compareHeight;
+			width: 120px;
+		}
+	}
+	.k-comp-alt {
+		color: #555;
+	}
+	.k-comp-year-comp-model {
+		width: 150px;
+	}
+	.k-comp-price-mileage-reviews {
+		width: 100px;
+	}
+	.k-comp-intext {
+		width: 130px;
+	}
+	.k-comp-transmission-drive {
+		width: 130px;
+	}
+	.k-comp-mpg-liters-cylinders {
+		width: 130px;
+	}
+
+	.k-comp-engine-hp-torque {
+		padding-right: $content-padding;
+	}
+}
+#k-compare-table-header {
+	height: 50px;
+	> div {
+		vertical-align: bottom;
+		font-weight: bold;
+	}
+}

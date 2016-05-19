@@ -219,4 +219,46 @@ h2.k-title {
 .k-controller:checked + .k-form-collapser-wrapper .k-form-identifier .k-plus {
   display: none; }
 
+#k-compare-table-wrapper {
+  overflow: auto; }
+
+.k-compare-table-entry {
+  font-size: 0;
+  white-space: nowrap;
+  height: 90px;
+  padding-bottom: 10px;
+  display: block;
+  text-decoration: none;
+  color: #000; }
+  .k-compare-table-entry > div {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle; }
+  .k-compare-table-entry .k-comp-image {
+    padding-left: 22px;
+    width: 140px; }
+    .k-compare-table-entry .k-comp-image img {
+      height: 90px;
+      width: 120px; }
+  .k-compare-table-entry .k-comp-alt {
+    color: #555; }
+  .k-compare-table-entry .k-comp-year-comp-model {
+    width: 150px; }
+  .k-compare-table-entry .k-comp-price-mileage-reviews {
+    width: 100px; }
+  .k-compare-table-entry .k-comp-intext {
+    width: 130px; }
+  .k-compare-table-entry .k-comp-transmission-drive {
+    width: 130px; }
+  .k-compare-table-entry .k-comp-mpg-liters-cylinders {
+    width: 130px; }
+  .k-compare-table-entry .k-comp-engine-hp-torque {
+    padding-right: 22px; }
+
+#k-compare-table-header {
+  height: 50px; }
+  #k-compare-table-header > div {
+    vertical-align: bottom;
+    font-weight: bold; }
+
 /*# sourceMappingURL=k_global.css.map */

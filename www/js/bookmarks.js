@@ -57,8 +57,6 @@
         var ajax = new XMLHttpRequest();
         ajax.open("GET", "/bookmarkservice?action=get", true);
         ajax.addEventListener("load", function(data) {
-            console.log(data.target.responseText);
-            console.log(JSON.parse(data.target.responseText))
             onBookmarkLoad(JSON.parse(data.target.responseText));
         });
         ajax.send();

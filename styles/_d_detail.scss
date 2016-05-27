@@ -41,13 +41,19 @@
   }
 }
 
+.d-link{
+  text-decoration: none;
+}
+
 .d-detail-button{
   margin: 10px 12px 20px 12px;
   padding: 15px 0 15px 16px;
   background-color: $color-carmax-yellow;
   font-weight: bold;
   font-family: $font-carmax-heading;
-  text-transform: capitalize;
+  text-transform: uppercase;
+
+  color: black;
 }
 
 

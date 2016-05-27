@@ -1,0 +1,25 @@
+.d-conf-img{
+  width: 100%;
+  display: block;
+}
+
+.d-conf-top{
+  margin: 10px 0 20px 0;
+  height: 48px;
+
+  > div{
+    margin-left: 24px;
+    width: 80%;
+    float: left;
+
+    > .d-conf-top-name{
+      font-family: $font-carmax-text;
+      color: $font-carmax-text;
+    }
+    > .d-conf-top-number{
+      font-family: $font-carmax-heading;
+      color: $color-carmax-blue;
+      font-size: 24px;
+    }
+  }
+}

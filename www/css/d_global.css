@@ -102,13 +102,17 @@
       color: #054FA0;
       font-size: 24px; }
 
+.d-link {
+  text-decoration: none; }
+
 .d-detail-button {
   margin: 10px 12px 20px 12px;
   padding: 15px 0 15px 16px;
   background-color: #FFD51D;
   font-weight: bold;
   font-family: Montserrat;
-  text-transform: capitalize; }
+  text-transform: uppercase;
+  color: black; }
 
 .d-detail-subtitle {
   font-size: 22px;
@@ -183,5 +187,24 @@
   .d-settings-button > a {
     text-decoration: none;
     color: #000; }
+
+.d-conf-img {
+  width: 100%;
+  display: block; }
+
+.d-conf-top {
+  margin: 10px 0 20px 0;
+  height: 48px; }
+  .d-conf-top > div {
+    margin-left: 24px;
+    width: 80%;
+    float: left; }
+    .d-conf-top > div > .d-conf-top-name {
+      font-family: Roboto;
+      color: Roboto; }
+    .d-conf-top > div > .d-conf-top-number {
+      font-family: Montserrat;
+      color: #054FA0;
+      font-size: 24px; }
 
 /*# sourceMappingURL=d_global.css.map */

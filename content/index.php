@@ -9,6 +9,10 @@ $body = <<<HTML
 	</div>
 </div>
 
+<!--
+	<img src="https://www.carmax.com/~/media/images/carmax/com/homepage/hero/hp-hero-mini-mobile.jpg?ts=20160224T193031Z" href="car" />
+-->
+
 <div class="k-container">
 
 	<h2 class="k-title">Introduction</h2>
@@ -37,7 +41,7 @@ $navContent = <<<HTML
 HTML;
 
 StaticPage::createContent()
-		->with(StaticPage::FIELD_TITLE, "Asdf?")
+		->with(StaticPage::FIELD_TITLE, "Home")
 		->with(StaticPage::FIELD_BODY, $body)
 		->with(StaticPage::GLOBAL_NAV_CONTENT, $navContent)
 		->render();

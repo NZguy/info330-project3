@@ -28,8 +28,9 @@ $detailHtml = '
 
 <div class="d-detail-button">Hold this car</div>
 
+<h2 class="d-detail-subtitle">Specifications</h2>
+
 <div class="d-detail-container">
-    <h2>Specifications</h2>
     
     <h3>Color</h3>
     <div class="d-detail-spec">
@@ -40,6 +41,8 @@ $detailHtml = '
         <div class="d-detail-spec-name">Exterior</div>
         <div class="d-detail-spec-data">'.$car->exterior.'</div>
     </div>
+    
+    <hr />
     
     <h3>Technical</h3>
     <div class="d-detail-spec">
@@ -69,25 +72,39 @@ $detailHtml = '
     
 </div>
 
-<!--
-<div class="d-detail-container">
-    <h2>Reviews</h2>
-    
-</div>
--->
-
 ';
 
 $body = <<<HTML
 $detailHtml
-HTML;
 
-$navContent = <<<HTML
-<div>Detail</div>
+<h2 class="d-detail-subtitle">Reviews</h2>
+
+<div class="d-detail-container">
+    
+    <div class="d-review">
+    
+        <h3>Great Car!</h3>
+        <div class="d-review-user">Duncan Andrew</div>
+        <div class="d-review-stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+        <p>
+            I bought this car because I commute and wanted to feel safe in my 
+            travels. The turbo gives the engine spunk when you have to get up 
+            and go! The size is perfect, the features have spoiled me!
+        </p>
+    
+    </div>
+    
+</div>
+
 HTML;
 
 StaticPage::createContent()
-    ->with(StaticPage::FIELD_TITLE, "Asdf?")
+    ->with(StaticPage::FIELD_TITLE, "Detail")
     ->with(StaticPage::FIELD_BODY, $body)
-    ->with(StaticPage::GLOBAL_NAV_CONTENT, $navContent)
     ->render();

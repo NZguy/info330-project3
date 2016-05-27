@@ -110,29 +110,60 @@
   font-family: Montserrat;
   text-transform: capitalize; }
 
+.d-detail-subtitle {
+  font-size: 22px;
+  color: #054FA0;
+  margin: 16px 22px 6px 22px; }
+
 .d-detail-container {
   margin: 10px 12px 20px 12px;
-  padding: 10px 12px 10px 12px;
+  padding: 16px 22px 14px 22px;
   font-family: Montserrat;
   color: #5A5C63;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); }
-  .d-detail-container > h2 {
-    font-size: 22px;
-    color: #054FA0; }
   .d-detail-container > h3 {
-    margin: 16px 10px 4px 10px;
-    font-size: 18px; }
+    margin: 0px 0px 16px 0px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #054FA0;
+    font-family: Roboto; }
   .d-detail-container > .d-detail-spec {
-    margin: 0 10px 12px 10px;
+    margin: 0 0px 12px 0px;
     font-size: 16px;
     font-weight: 200;
-    border-bottom: solid 1px #5A5C63;
+    border-bottom: solid 2px #ebebeb;
     overflow: auto; }
     .d-detail-container > .d-detail-spec > .d-detail-spec-name {
       float: left;
-      color: #054FA0; }
+      color: #054FA0;
+      font-family: Roboto; }
     .d-detail-container > .d-detail-spec > .d-detail-spec-data {
-      float: right; }
+      float: right;
+      font-family: Roboto; }
+  .d-detail-container > hr {
+    margin: 22px -22px 22px -22px;
+    border: none;
+    height: 1.5px;
+    background-color: #ebebeb; }
+
+.d-review > h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #054FA0;
+  font-family: Roboto; }
+.d-review > .d-review-user {
+  margin-top: 4px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 300; }
+.d-review > .d-review-stars {
+  color: #FFD51D;
+  margin: 10px 0 10px 0; }
+.d-review > p {
+  margin: 0;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300; }
 
 .d-settings-notification {
   margin: 10px 0px 20px 0px;

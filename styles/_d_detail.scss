@@ -50,35 +50,75 @@
   text-transform: capitalize;
 }
 
+
+.d-detail-subtitle{
+  font-size: 22px;
+  color: $color-carmax-blue;
+  margin: 16px 22px 6px 22px;
+}
+
 .d-detail-container{
   margin: 10px 12px 20px 12px;
-  padding: 10px 12px 10px 12px;
+  padding: 16px 22px 14px 22px;
   font-family: $font-carmax-heading;
   color: $color-carmax-text;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 
-  > h2{
-    font-size: 22px;
-    color: $color-carmax-blue;
-  }
   > h3{
-    margin: 16px 10px 4px 10px;
-    font-size: 18px;
+    margin: 0px 0px 16px 0px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-carmax-blue;
+    font-family: $font-carmax-text;
   }
 
   > .d-detail-spec{
-    margin: 0 10px 12px 10px;
+    margin: 0 0px 12px 0px;
     font-size: 16px;
     font-weight: 200;
-    border-bottom: solid 1px $color-carmax-text;
+    border-bottom: solid 2px #ebebeb;
     overflow: auto;
 
     > .d-detail-spec-name{
       float: left;
       color: $color-carmax-blue;
+      font-family: $font-carmax-text;
     }
     > .d-detail-spec-data{
       float: right;
+      font-family: $font-carmax-text;
     }
+  }
+  > hr{
+    margin: 22px -22px 22px -22px;
+    border: none;
+    height: 1.5px;
+    background-color: #ebebeb;
+  }
+}
+
+.d-review{
+
+  > h3{
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-carmax-blue;
+    font-family: $font-carmax-text;
+  }
+  > .d-review-user{
+    margin-top: 4px;
+    font-family: $font-carmax-text;
+    font-size: 12px;
+    font-weight: 300;
+  }
+  > .d-review-stars{
+    color: $color-carmax-yellow;
+    margin: 10px 0 10px 0;
+  }
+  > p{
+    margin: 0;
+    font-family: $font-carmax-text;
+    font-size: 16px;
+    font-weight: 300;
   }
 }

@@ -23,7 +23,7 @@ class StaticPage extends Content {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>The Title {$fields[self::FIELD_TITLE]}</title>
+	<title>{$fields[self::FIELD_TITLE]}</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />

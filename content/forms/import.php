@@ -6,24 +6,21 @@ use common\session\Session;
 
 
 $bottomButton = "";
+$skipButton = "";
 if (Session::exists(SessionKVs::TUTORIAL_KEY)) {
 	$bottomButton = '<a href="/recommendations" class="k-button k-fullscreen k-secondary">Return to Recommendations</a>';
 }else{
 	$bottomButton = '<a href="/forms/personality" class="k-button k-fullscreen k-secondary">Continue to Personality Survey</a>';
+	$skipButton = '<a href="/forms/personality" class="k-button k-form-inline">Nah, maybe later &gt;</a>';
 	// Add another button for skipping this step and tutorial
 }
 
 $body = <<<HTML
-<div class="k-page-title k-container">
-	<div class="k-title">
-		Importing Profiles
-	</div>
-</div>
 <div class="k-container">
+	<div class="k-spacer k-normal"></div>
 	<h2 class="k-title">Social Media</h2>
-	<div class="k-block-text">
-		We use social media to take a small peek at how you interact with friends and family, and
-		search for vehicles that would best suit your social and personal needs.
+	<div class="k-form-skip">
+		$skipButton
 	</div>
 	<div class="k-button k-fullscreen"><i class="fa fa-facebook"></i>Facebook</div>
 	<div class="k-button k-fullscreen"><i class="fa fa-google-plus"></i>Google Plus</div>
@@ -31,7 +28,7 @@ $body = <<<HTML
 	<div class="k-button k-fullscreen"><i class="fa fa-instagram"></i>Instagram</div>
 	
 	<div class="k-spacer k-normal"></div>
-	<h2 class="k-title">Platforms</h2>
+	<h2 class="k-title">Connect Other Platforms</h2>
 	<div class="k-block-text">
 		These various other sources allow us to get a feel for how you'd like the car the handle.
 		This proprietary import algorithm selects your best interests, and lets us search for your
@@ -48,6 +45,6 @@ $body = <<<HTML
 HTML;
 
 StaticPage::createContent()
-		->with(StaticPage::FIELD_TITLE, "Import")
+		->with(StaticPage::FIELD_TITLE, "Connect Accounts")
 		->with(StaticPage::FIELD_BODY, $body)
 		->render();

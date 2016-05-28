@@ -10,7 +10,7 @@ if (Session::exists(SessionKVs::TUTORIAL_KEY)) {
 	$bottomButton = '<a href="/recommendations" class="k-button k-fullscreen k-secondary">Return to Recommendations</a>';
 }else{
 	$bottomButton = '<a href="/forms/questionnaire" class="k-button k-fullscreen k-secondary">Continue to Car Questionnaire</a>';
-	$skipButton = '<a href="/forms/questionnaire" class="k-button k-form-inline">Skip Personality Quiz &gt;</a>';
+	$skipButton = '<a href="/forms/questionnaire" class="k-button k-form-inline">No thanks, I want to skip this &gt;</a>';
 	// Add another button for skipping this step and tutorial
 }
 
@@ -29,23 +29,23 @@ $body = <<<HTML
 		<label class="k-form-collapser" for="k-p-personal">Personal</label>
 	</div>
 	<div class="k-form-content">
-		<select class="k-input">
-			<option>How old are you?</option>
-			<option>&lt; 18</option>
-			<option>18-22</option>
-			<option>23-29</option>
-			<option>30-39</option>
-			<option>40-54</option>
-			<option>55+</option>
-		</select>
-		<select class="k-input">
-			<option>Gender?</option>
-			<option>Male</option>
-			<option>Female</option>
-			<option>Trans - MtF</option>
-			<option>Trans - FtM</option>
-			<option>Other</option>
-		</select>
+		<div class="k-form-group k-nospace">
+			<div class="k-title">How old are you?</div>
+			<div class="kfct-input"><input type="radio" name="kage" id="kfct-18" /><label for="kfct-18">&lt; 18</label></div>
+			<div class="kfct-input"><input type="radio" name="kage" id="kfct-1822" /><label for="kfct-1822">18 - 22</label></div>
+			<div class="kfct-input"><input type="radio" name="kage" id="kfct-2329" /><label for="kfct-2329">23 - 29</label></div>
+			<div class="kfct-input"><input type="radio" name="kage" id="kfct-3039" /><label for="kfct-3039">30 - 39</label></div>
+			<div class="kfct-input"><input type="radio" name="kage" id="kfct-4054" /><label for="kfct-4054">40 - 54</label></div>
+			<div class="kfct-input"><input type="radio" name="kage" id="kfct-55" /><label for="kfct-55">55 +</label></div>
+		</div>
+		<div class="k-form-group k-nospace">
+			<div class="k-title">Gender</div>
+			<div class="kfct-input"><input type="radio" name="kgender" id="kfct-Male" /><label for="kfct-Male">Male</label></div>
+			<div class="kfct-input"><input type="radio" name="kgender" id="kfct-Female" /><label for="kfct-Female">Female</label></div>
+			<div class="kfct-input"><input type="radio" name="kgender" id="kfct-TransMtF" /><label for="kfct-TransMtF">Trans - MtF</label></div>
+			<div class="kfct-input"><input type="radio" name="kgender" id="kfct-TransFtM" /><label for="kfct-TransFtM">Trans - FtM</label></div>
+			<div class="kfct-input"><input type="radio" name="kgender" id="kfct-Other" /><label for="kfct-Other">Other</label></div>
+		</div>
 		<select class="k-input">
 			<option>Which condiment do you like the most?</option>
 			<option>Ketchup</option>

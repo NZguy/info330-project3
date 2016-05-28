@@ -10,7 +10,7 @@ if (Session::exists(SessionKVs::TUTORIAL_KEY)) {
 	$bottomButton = '<a href="/recommendations" class="k-button k-fullscreen k-secondary">Return to Recommendations</a>';
 }else{
 	$bottomButton = '<a href="/recommendations" class="k-button k-fullscreen k-secondary">Finish - Show me the Cars!</a>';
-	$skipButton = '<a href="/recommendations" class="k-button k-form-inline">Skip And Just Show Me Some Cars  &gt;</a>';
+	$skipButton = '<a href="/recommendations" class="k-button k-form-inline">Just show me some cars! &gt;</a>';
 	// Add another button for skipping this step and tutorial
 }
 
@@ -54,6 +54,14 @@ $body = <<<HTML
 			</div>
 			<div class="k-ui-slider-values"><span id="k-msrp-low">$0</span> to <span id="k-msrp-high">no maximum</span></div>
 		</div>
+		<div class="k-form-group">
+			<div class="k-title">Fuel Economy</div>
+			<div id="k-mpg-slider" class="ui-slider ui-slider-range-max ui-slider-horizontal">
+				<div class="ui-slider-handle" style="margin-left: 0;"></div>
+				<div class="ui-slider-range"></div>
+			</div>
+			<div class="k-ui-slider-values"><span id="k-mpg-low">no minimum</span></div>
+		</div>
 		<select class="k-input">
 			<option>Doors</option>
 			<option>2-Door</option>
@@ -67,14 +75,6 @@ $body = <<<HTML
 			<option>Continuous Variable</option>
 			<option>Direct Shift Gearbox</option>
 		</select>
-		<div class="k-form-group">
-			<div class="k-title">Fuel Economy</div>
-			<div id="k-mpg-slider" class="ui-slider ui-slider-range-max ui-slider-horizontal">
-				<div class="ui-slider-handle" style="margin-left: 0;"></div>
-				<div class="ui-slider-range"></div>
-			</div>
-			<div class="k-ui-slider-values"><span id="k-mpg-low">no minimum</span></div>
-		</div>
 	</div>
 
 	<input class="k-controller" type="checkbox" id="k-p-addons" />

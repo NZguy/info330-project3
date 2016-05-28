@@ -1,0 +1,26 @@
+// whatever.
+
+
+#k-clickedon {
+	display: none;
+	font-size: 23px;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .5);
+
+	> div {
+		background-color: #FFF;
+		width: 75%;
+		border-radius: 6px;
+		margin: 200px auto;
+		padding: 30px 10px;
+	}
+	i {
+		font-size: 72px;
+		margin-top: 20px;
+	}
+}

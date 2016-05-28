@@ -342,4 +342,24 @@ h2.k-title {
     font-family: Montserrat,sans-serif;
     z-index: 100; }
 
+#k-clickedon {
+  display: none;
+  font-size: 23px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+  #k-clickedon > div {
+    background-color: #FFF;
+    width: 75%;
+    border-radius: 6px;
+    margin: 200px auto;
+    padding: 30px 10px; }
+  #k-clickedon i {
+    font-size: 72px;
+    margin-top: 20px; }
+
 /*# sourceMappingURL=k_global.css.map */

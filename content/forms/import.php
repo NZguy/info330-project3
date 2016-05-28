@@ -22,10 +22,10 @@ $body = <<<HTML
 	<div class="k-form-skip">
 		$skipButton
 	</div>
-	<div class="k-button k-fullscreen"><i class="fa fa-facebook"></i>Facebook</div>
-	<div class="k-button k-fullscreen"><i class="fa fa-google-plus"></i>Google Plus</div>
-	<div class="k-button k-fullscreen"><i class="fa fa-twitter"></i>Twitter</div>
-	<div class="k-button k-fullscreen"><i class="fa fa-instagram"></i>Instagram</div>
+	<div class="k-button k-fullscreen k-clickedon-trigger"><i class="fa fa-facebook"></i>Facebook</div>
+	<div class="k-button k-fullscreen k-clickedon-trigger"><i class="fa fa-google-plus"></i>Google Plus</div>
+	<div class="k-button k-fullscreen k-clickedon-trigger"><i class="fa fa-twitter"></i>Twitter</div>
+	<div class="k-button k-fullscreen k-clickedon-trigger"><i class="fa fa-instagram"></i>Instagram</div>
 	
 	<div class="k-spacer k-normal"></div>
 	<h2 class="k-title">Connect Other Platforms</h2>
@@ -34,14 +34,32 @@ $body = <<<HTML
 		This proprietary import algorithm selects your best interests, and lets us search for your
 		most desired vehicle.
 	</div>
-	<div class="k-button k-fullscreen"><i class="fa fa-steam"></i>Steam</div>
-	<div class="k-button k-fullscreen"><i class="fa fa-android"></i>Android</div>
-	<div class="k-button k-fullscreen"><i class="fa fa-deviantart"></i>DeviantArt</div>
+	<div class="k-button k-fullscreen k-clickedon-trigger"><i class="fa fa-steam"></i>Steam</div>
+	<div class="k-button k-fullscreen k-clickedon-trigger"><i class="fa fa-android"></i>Android</div>
+	<div class="k-button k-fullscreen k-clickedon-trigger"><i class="fa fa-deviantart"></i>DeviantArt</div>
 
 
 	<div class="k-spacer k-normal"></div>
 	$bottomButton
+	
+	<div id="k-clickedon">
+		<div>
+			<div>Bam. You're connected.</div>
+			<i class="fa fa-thumbs-up"></i>
+		</div>
+	</div>
 </div>
+
+<script>
+$(function() {
+	$('#k-clickedon').click(function() {
+		$(this).css('display', 'none');
+	});
+	$('.k-clickedon-trigger').click(function() {
+		$('#k-clickedon').css('display', 'block');
+	});
+});
+</script>
 HTML;
 
 StaticPage::createContent()

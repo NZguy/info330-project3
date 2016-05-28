@@ -42,22 +42,19 @@ $body = <<<HTML
 <div class="d-rec-container">
     <div class="k-spacer k-normal"></div>
 
+    <div id="k-compare-hover"><a href="/bookmarks" class="k-button">Compare Selected</a></div>
     <div class='k-container'>
         <h2 class='k-title'>Here's What We Found For You</h2>
         <div class='k-block-text'>
-            We've sent our highly trained staff to find cars that fit your each and ever need and
-            here are the results. Star (bookmark) each vehicle that looks nice and to compare with our
-            patent pending car-parer-er in the Bookmarks tab.
+            Protip: <i style="color: #999;" class="fa fa-star"></i> your favorite vehicles to compare them!
         </div>
     </div>
     
     <div class="k-spacer k-normal"></div>
     $carHtml
     <div class="k-spacer k-normal"></div>
-    <div class="k-container">
-        <a class="k-button k-fullscreen k-secondary" href="/bookmarks">Compare Bookmarked</a>
-    </div>
 </div>
+
 
 <script src="/js/bookmarks.js" type="text/javascript"></script>
 HTML;

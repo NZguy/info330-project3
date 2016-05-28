@@ -326,4 +326,20 @@ h2.k-title {
     vertical-align: bottom;
     font-weight: bold; }
 
+#k-compare-hover {
+  height: 22px;
+  display: none; }
+  #k-compare-hover a {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: block;
+    padding: 16px 0;
+    background-color: #FFD51D;
+    color: #000;
+    font-family: Montserrat,sans-serif;
+    z-index: 100; }
+
 /*# sourceMappingURL=k_global.css.map */

@@ -57,3 +57,20 @@ $compareHeight: 90px;
 		font-weight: bold;
 	}
 }
+#k-compare-hover {
+	height: $content-padding;
+	display: none;
+	a {
+		position: fixed;
+		top: $global-nav-height;
+		left: 0;
+		right: 0;
+		text-align: center;
+		display: block;
+		padding: 16px 0;
+		background-color: $color-carmax-yellow;
+		color: #000;
+		font-family: Montserrat,sans-serif;
+		z-index: 100;
+	}
+}

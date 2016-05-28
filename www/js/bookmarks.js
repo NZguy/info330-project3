@@ -32,6 +32,7 @@
 
             bookmarkArray = gotBookmarkArray;
         }
+        updateCompareButton();
 
     }
 
@@ -50,6 +51,7 @@
         // Set session car bookmark data
         setBookmarkArray(bookmarkArray);
         console.log(bookmarkArray);
+        updateCompareButton();
     }
 
     function getBookmarkArray() {
@@ -74,6 +76,17 @@
             console.log(data.target.responseText);
         });
         ajax.send();
+    }
+
+    function updateCompareButton() {
+        var shouldVisible = false;
+        for (var i = 0; i < bookmarkArray.length; i++) {
+            if (bookmarkArray[i]) {
+                shouldVisible = true;
+                break;
+            }
+        }
+        $('#k-compare-hover').css('display', (shouldVisible ? "block" : "none"));
     }
 
 }) ();

@@ -5,53 +5,55 @@ use i330p3\SessionKVs;
 use common\session\Session;
 
 $bottomButton = "";
+$skipButton = "";
 if (Session::exists(SessionKVs::TUTORIAL_KEY)) {
 	$bottomButton = '<a href="/recommendations" class="k-button k-fullscreen k-secondary">Return to Recommendations</a>';
 }else{
 	$bottomButton = '<a href="/recommendations" class="k-button k-fullscreen k-secondary">Finish - Show me the Cars!</a>';
+	$skipButton = '<a href="/recommendations" class="k-button k-form-inline">Skip And Just Show Me Some Cars  &gt;</a>';
 	// Add another button for skipping this step and tutorial
 }
 
 $body = <<<HTML
 <div class="k-spacer k-normal"></div>
 <div class="k-container">
-	<h2 class="k-title">Tell us what you want.</h2>
-	<div class="k-block-text">
-		Alongside our personality and sophisticated import algorithms, we'd like to hear what you
-		want directly because, well, you know you best.
+	<h2 class="k-title">Tell us about your dream car</h2>
+
+	<div class="k-form-skip">
+		$skipButton
 	</div>
 	
 	<div class="k-spacer k-normal"></div>
 	<input class="k-controller" type="checkbox" id="k-p-standard" />
 	<div class="k-form-collapser-wrapper">
 		<div class="k-form-identifier">[<span class="k-plus">+</span><span class="k-minus">-</span>]</div>
-		<label class="k-form-collapser" for="k-p-standard">Standard Features</label>
+		<label class="k-form-collapser" for="k-p-standard">Standard</label>
 	</div>
 	<div class="k-form-content">
-		<select class="k-input">
-			<option>Type</option>
-			<option>Convertible</option>
-			<option>Coup</option>
-			<option>Crossover</option>
-			<option>Diesel</option>
-			<option>Hybrid</option>
-			<option>Luxury</option>
-			<option>Van/Minivan</option>
-			<option>Truck</option>
-			<option>Sedan</option>
-			<option>Sports</option>
-			<option>SUV</option>
-			<option>Station Wagon</option>
-		</select>
-		<select class="k-input">
-			<option>Base MSRP</option>
-			<option>&lt; $10,000</option>
-			<option>&lt; $20,000</option>
-			<option>&lt; $30,000</option>
-			<option>&lt; $50,000</option>
-			<option>&lt; $100,000</option>
-			<option>&lt; $500,000</option>
-		</select>
+		<div class="k-form-group k-nospace">
+			<div class="k-title">Car Type</div>
+			<div class="kfct-input"><input type="checkbox" id="kfct-Convertible" /><label for="kfct-Convertible">Convertible</label></div>
+			<div class="kfct-input"><input type="checkbox" id="kfct-Coup" /><label for="kfct-Coup">Coup</label></div>
+			<div class="kfct-input"><input type="checkbox" id="kfct-Crossover" /><label for="kfct-Crossover">Crossover</label></div>
+			<div class="kfct-input"><input type="checkbox" id="kfct-Diesel" /><label for="kfct-Diesel">Diesel</label></div>
+			<div class="kfct-input"><input type="checkbox" id="kfct-Hybrid" /><label for="kfct-Hybrid">Hybrid</label></div>
+			<div class="kfct-input"><input type="checkbox" id="kfct-Luxury" /><label for="kfct-Luxury">Luxury</label></div>
+			<div class="kfct-input"><input type="checkbox" id="kfct-Van" /><label for="kfct-Van">Van/Minivan</label></div>
+			<div class="kfct-input"><input type="checkbox" id="kfct-Truck" /><label for="kfct-Truck">Truck</label></div>
+			<div class="kfct-input"><input type="checkbox" id="kfct-Sedan" /><label for="kfct-Sedan">Sedan</label></div>
+			<div class="kfct-input"><input type="checkbox" id="kfct-Sports" /><label for="kfct-Sports">Sports</label></div>
+			<div class="kfct-input"><input type="checkbox" id="kfct-SUV" /><label for="kfct-SUV">SUV</label></div>
+			<div class="kfct-input"><input type="checkbox" id="kfct-StationWagon" /><label for="kfct-StationWagon">Station Wagon</label></div>
+		</div>
+		<div class="k-form-group">
+			<div class="k-title">Price Range</div>
+			<div id="k-msrp-slider" class="ui-slider ui-slider-horizontal">
+				<div class="ui-slider-handle" style="margin-left: 0;"></div>
+				<div class="ui-slider-handle" style="margin-left: -.8em;"></div>
+				<div class="ui-slider-range"></div>
+			</div>
+			<div class="k-ui-slider-values"><span id="k-msrp-low">$0</span> to <span id="k-msrp-high">no maximum</span></div>
+		</div>
 		<select class="k-input">
 			<option>Doors</option>
 			<option>2-Door</option>
@@ -65,13 +67,14 @@ $body = <<<HTML
 			<option>Continuous Variable</option>
 			<option>Direct Shift Gearbox</option>
 		</select>
-		<select class="k-input">
-			<option>MPG</option>
-			<option>&gt; 10</option>
-			<option>&gt; 20</option>
-			<option>&gt; 30</option>
-			<option>&gt; 40</option>
-		</select>
+		<div class="k-form-group">
+			<div class="k-title">Fuel Economy</div>
+			<div id="k-mpg-slider" class="ui-slider ui-slider-range-max ui-slider-horizontal">
+				<div class="ui-slider-handle" style="margin-left: 0;"></div>
+				<div class="ui-slider-range"></div>
+			</div>
+			<div class="k-ui-slider-values"><span id="k-mpg-low">no minimum</span></div>
+		</div>
 	</div>
 
 	<input class="k-controller" type="checkbox" id="k-p-addons" />
@@ -169,7 +172,33 @@ $body = <<<HTML
 	<div class="k-spacer k-normal"></div>
 	$bottomButton
 </div>
+<script>
+	$(function() {
+		var msrpMaxValue = 100000;
+		$("#k-msrp-slider").slider({
+			range: true,
+			step: 1000,
+			min: 0,
+			max: msrpMaxValue,
+			values: [0, msrpMaxValue],
+			slide: function(e, u) {
+				$('#k-msrp-low').html("$" + u.values[0]);
+				$('#k-msrp-high').html((u.values[1] == msrpMaxValue) ? "no maximum" : "$" + u.values[1]);
+			}
+		});
+		var mpgMaxValue = 100;
+		$("#k-mpg-slider").slider({
+			range: "max",
+			step: 1,
+			min: 0,
+			max: mpgMaxValue,
+			slide: function(e, u) {
+				$('#k-mpg-low').html((u.value == 0) ? "no minimum" : "at least " + u.value + " mpg");
+			}
+		});
 
+	});
+</script>
 HTML;
 
 StaticPage::createContent()

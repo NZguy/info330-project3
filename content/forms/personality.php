@@ -5,10 +5,12 @@ use i330p3\SessionKVs;
 use common\session\Session;
 
 $bottomButton = "";
+$skipButton = "";
 if (Session::exists(SessionKVs::TUTORIAL_KEY)) {
 	$bottomButton = '<a href="/recommendations" class="k-button k-fullscreen k-secondary">Return to Recommendations</a>';
 }else{
 	$bottomButton = '<a href="/forms/questionnaire" class="k-button k-fullscreen k-secondary">Continue to Car Questionnaire</a>';
+	$skipButton = '<a href="/forms/questionnaire" class="k-button k-form-inline">Skip Personality Quiz &gt;</a>';
 	// Add another button for skipping this step and tutorial
 }
 
@@ -16,9 +18,8 @@ $body = <<<HTML
 <div class="k-spacer k-normal"></div>
 <div class="k-container">
 	<h2 class="k-title">Let us get to know you!</h2>
-	<div class="k-block-text">
-		We use your answers here to tailor our recommendations to your personal lifestyle. Feel free
-		to answer as few or as many questions as you want.
+	<div class="k-form-skip">
+		$skipButton
 	</div>
 	
 	<div class="k-spacer k-normal"></div>

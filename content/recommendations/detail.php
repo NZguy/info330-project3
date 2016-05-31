@@ -27,7 +27,7 @@ $detailHtml = '
 </div>
 
 <a class="d-link" href="/recommendations/confirmation?car='.$carIndex.'">
-    <div class="d-detail-button">Hold this car</div>
+    <div class="d-detail-button">Test Drive this car</div>
 </a>
 
 
